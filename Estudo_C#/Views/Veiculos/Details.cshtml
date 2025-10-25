@@ -1,0 +1,42 @@
+﻿@model Estudo_C_.Models.Veiculo
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Detalhes do Veículo</h1>
+
+<div>
+    <h4>Veiculo</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Nome)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Nome)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.placa)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.placa)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.anoFabricacao)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.anoFabricacao)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.anoModelo)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.anoModelo)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Index" class="btn btn-info">Voltar</a>
+    <a asp-action="Edit" class="btn btn-warning" asp-route-id="@Model?.Id">Editar</a>
+</div>
