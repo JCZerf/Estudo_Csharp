@@ -1,12 +1,12 @@
-﻿@model Estudo_C_.Models.Veiculo
+﻿@model Estudo_C_.Models.Usuarios
 
 @{
     ViewData["Title"] = "Create";
 }
 
-<h1>Cadastrar Veículo</h1>
+<h1>Cadastrar Usuários</h1>
 
-<h4>Veiculo</h4>
+
 <hr />
 <div class="row">
     <div class="col-md-4">
@@ -18,19 +18,14 @@
                 <span asp-validation-for="Nome" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="placa" class="control-label"></label>
-                <input asp-for="placa" class="form-control" />
-                <span asp-validation-for="placa" class="text-danger"></span>
+                <label asp-for="Senha" class="control-label"></label>
+                <input asp-for="Senha" class="form-control" />
+                <span asp-validation-for="Senha" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="anoFabricacao" class="control-label"></label>
-                <input asp-for="anoFabricacao" class="form-control" />
-                <span asp-validation-for="anoFabricacao" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="anoModelo" class="control-label"></label>
-                <input asp-for="anoModelo" class="form-control" />
-                <span asp-validation-for="anoModelo" class="text-danger"></span>
+                <label asp-for="Perfil" class="control-label"></label>
+                <select asp-for="Perfil" class="form-control" asp-items="Html.GetEnumSelectList<Perfil>()"></select>
+                <span asp-validation-for="Perfil" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <a asp-action="Index" class="btn btn-info">Voltar</a> |
@@ -39,6 +34,7 @@
         </form>
     </div>
 </div>
+
 
 @section Scripts {
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}

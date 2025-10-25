@@ -14,10 +14,12 @@ namespace Estudo_C_.Models
         [Display(Name = "Placa")]
         public string placa { get; set; }
         [Required(ErrorMessage = "Ano de fabricação é obrigatório!")]
-        [Display (Name = "Ano de Fabricação")]
+        [Display(Name = "Ano de Fabricação")]
         public int anoFabricacao { get; set; }
         [Required(ErrorMessage = "Ano do modelo é obrigatório!")]
         [Display(Name = "Ano do Modelo")]
         public int anoModelo { get; set; }
+
+        public ICollection<Consumos> Consumos {get; set;}
     }
 }
